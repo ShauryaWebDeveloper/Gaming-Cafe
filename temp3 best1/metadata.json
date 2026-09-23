@@ -1,0 +1,6 @@
+{
+  "name": "HIVE The Gaming Arena",
+  "description": "Premier esports and gaming entertainment arena in Shastri Nagar, Jammu, featuring PC LAN rigs, PlayStation, VR, Pool & Snooker, and competitive tournaments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
