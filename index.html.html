@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIVE The Gaming Arena | Shastri Nagar, Jammu</title>
+  <meta name="description" content="Premier esports and gaming entertainment arena in Shastri Nagar, Jammu featuring PC LAN rigs, PlayStation, VR, Pool & Snooker, and tournaments.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================================
+       THEME & DESIGN SYSTEM (Black, Purple, Electric Yellow)
+       ======================================================== */
+    :root {
+      --bg-black: #070411;
+      --bg-surface: #0e0821;
+      --bg-surface-elevated: #150d30;
+      --bg-card: #100926;
+      --purple-primary: #9333ea;
+      --purple-light: #c084fc;
+      --purple-glow: rgba(168, 85, 247, 0.35);
+      --purple-border: rgba(147, 51, 234, 0.4);
+      --yellow-accent: #facc15;
+      --yellow-hover: #fde047;
+      --yellow-glow: rgba(250, 204, 21, 0.35);
+      --text-white: #ffffff;
+      --text-zinc-100: #f4f4f5;
+      --text-zinc-300: #d4d4d8;
+      --text-zinc-400: #a1a1aa;
+      --font-display: 'Chakra Petch', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-zinc-100);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: radial-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Utility typography */
+    .font-display {
+      font-family: var(--font-display);
+    }
+    .text-yellow {
+      color: var(--yellow-accent);
+    }
+    .text-purple {
+      color: var(--purple-light);
+    }
+
+    /* ========================================================
+       TOP TICKER & HEADER NAVIGATION
+       ======================================================== */
+    .announcement-bar {
+      background: #0b0618;
+      border-bottom: 1px solid rgba(147, 51, 234, 0.3);
+      padding: 8px 0;
+      font-size: 12px;
+      color: var(--text-zinc-300);
+    }
+    .announcement-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(250, 204, 21, 0.1);
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      color: var(--yellow-accent);
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 4, 17, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(147, 51, 234, 0.25);
+      padding: 14px 0;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--purple-primary), #3b0764);
+      border: 1px solid rgba(250, 204, 21, 0.6);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px var(--purple-glow);
+    }
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--yellow-accent);
+    }
+    .brand-text h1 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: #ffffff;
+      line-height: 1;
+    }
+    .brand-text span {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--yellow-accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.desktop-nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-zinc-300);
+      transition: color 0.2s;
+    }
+    nav.desktop-nav a:hover {
+      color: var(--yellow-accent);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--purple-primary), #6b21a8);
+      border: 1px solid var(--yellow-accent);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+    }
+    .btn-cta:hover {
+      background: linear-gradient(135deg, #a855f7, #7e22ce);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--yellow-glow);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      color: var(--text-zinc-100);
+    }
+    .btn-secondary:hover {
+      border-color: var(--yellow-accent);
+      color: var(--yellow-accent);
+    }
+
+    /* ========================================================
+       HERO SECTION
+       ======================================================== */
+    .hero {
+      position: relative;
+      padding: 70px 0 60px;
+      overflow: hidden;
+    }
+    .hero-glow-purple {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 350px;
+      background: var(--purple-glow);
+      filter: blur(140px);
+      pointer-events-none;
+      border-radius: 50%;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(147, 51, 234, 0.15);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      color: var(--purple-light);
+    }
+    .pill-yellow {
+      background: rgba(250, 204, 21, 0.12);
+      border-color: rgba(250, 204, 21, 0.4);
+      color: var(--yellow-accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .hero-title span.highlight {
+      background: linear-gradient(90deg, #c084fc, var(--yellow-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-zinc-300);
+      max-width: 720px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 50px;
+    }
+
+    /* Bento Stats Ribbon */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .bento-card {
+      background: var(--bg-surface);
+      border: 1px solid rgba(147, 51, 234, 0.3);
+      padding: 18px;
+      border-radius: var(--radius-md);
+      transition: all 0.3s;
+    }
+    .bento-card:hover {
+      border-color: var(--yellow-accent);
+      transform: translateY(-2px);
+    }
+    .bento-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(147, 51, 234, 0.2);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: var(--yellow-accent);
+    }
+    .bento-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .bento-desc {
+      font-size: 12px;
+      color: var(--text-zinc-400);
+    }
+
+    /* ========================================================
+       SECTION COMMON STYLES
+       ======================================================== */
+    section {
+      padding: 70px 0;
+      position: relative;
+    }
+    .section-tag {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--yellow-accent);
+      background: rgba(250, 204, 21, 0.1);
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+    }
+    .section-heading {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(26px, 4vw, 40px);
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .section-lead {
+      color: var(--text-zinc-400);
+      font-size: 14px;
+      max-width: 600px;
+      margin-bottom: 35px;
+    }
+
+    /* ========================================================
+       GAMING ZONES CARDS
+       ======================================================== */
+    .zones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .zone-card {
+      background: var(--bg-card);
+      border: 1px solid var(--purple-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s;
+    }
+    .zone-card:hover {
+      border-color: var(--yellow-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .zone-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .zone-badge {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      background: rgba(250, 204, 21, 0.15);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      color: var(--yellow-accent);
+    }
+    .zone-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .zone-tagline {
+      font-size: 12px;
+      color: var(--purple-light);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .zone-desc {
+      font-size: 13px;
+      color: var(--text-zinc-400);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .zone-specs {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .zone-specs li {
+      font-size: 12px;
+      color: var(--text-zinc-300);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .zone-specs li::before {
+      content: '✔';
+      color: var(--purple-light);
+      font-weight: bold;
+    }
+    .zone-pricing {
+      padding-top: 14px;
+      border-top: 1px solid rgba(147, 51, 234, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+    }
+    .price-value {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--yellow-accent);
+    }
+
+    /* ========================================================
+       TOURNAMENT SHOWCASE (HIVE Gaming Fest & Valorant LAN)
+       ======================================================== */
+    .fest-banner {
+      background: linear-gradient(135deg, #1b0d38, #0e0720);
+      border: 2px solid var(--yellow-accent);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+    }
+    .fest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .fest-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(26px, 4vw, 42px);
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .fest-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .metric-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      padding: 12px;
+      border-radius: var(--radius-md);
+    }
+    .metric-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-zinc-400);
+      display: block;
+    }
+    .metric-val {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--yellow-accent);
+    }
+
+    /* Tournament Archive Grid */
+    .tourneys-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .tourney-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--purple-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    /* ========================================================
+       SLOT & RATE CALCULATOR
+       ======================================================== */
+    .calc-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--purple-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 850px) {
+      .calc-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .calc-group {
+      margin-bottom: 18px;
+    }
+    .calc-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-zinc-300);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .option-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill-btn {
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface-elevated);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      color: var(--text-zinc-300);
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .pill-btn.active {
+      background: var(--purple-primary);
+      border-color: var(--yellow-accent);
+      color: #ffffff;
+    }
+    .receipt-box {
+      background: var(--bg-card);
+      border: 2px solid var(--purple-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: var(--text-zinc-300);
+    }
+    .receipt-total {
+      padding-top: 14px;
+      border-top: 1px solid rgba(147, 51, 234, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .total-price {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--yellow-accent);
+    }
+
+    /* ========================================================
+       LOCATION & HOURS SECTION
+       ======================================================== */
+    .location-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--purple-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 850px) {
+      .location-box {
+        grid-template-columns: 1fr;
+      }
+    }
+    .plus-code-banner {
+      background: rgba(147, 51, 234, 0.15);
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      padding: 14px;
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px 0;
+    }
+    .map-preview {
+      background: #090514;
+      border: 1px solid rgba(147, 51, 234, 0.4);
+      border-radius: var(--radius-md);
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* ========================================================
+       MODAL
+       ======================================================== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #0f0923;
+      border: 2px solid var(--yellow-accent);
+      border-radius: var(--radius-lg);
+      max-width: 480px;
+      width: 100%;
+      padding: 28px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: none;
+      color: var(--text-zinc-400);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-close:hover {
+      color: #ffffff;
+    }
+
+    /* Form controls */
+    .input-field {
+      width: 100%;
+      background: #160d32;
+      border: 1px solid rgba(147, 51, 234, 0.5);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      color: #ffffff;
+      font-size: 13px;
+      margin-bottom: 12px;
+      outline: none;
+    }
+    .input-field:focus {
+      border-color: var(--yellow-accent);
+    }
+
+    /* Footer */
+    footer {
+      background: #04020a;
+      border-top: 1px solid rgba(147, 51, 234, 0.3);
+      padding: 40px 0 30px;
+      font-size: 13px;
+      color: var(--text-zinc-400);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="badge-status">
+          <span class="status-dot" id="live-indicator"></span>
+          <span id="live-text">OPEN NOW • 10:00 AM – 11:00 PM</span>
+        </span>
+        <span style="color: var(--text-zinc-400);">|</span>
+        <span>MVV6+83J, Shastri Nagar, Jammu, J&amp;K 180004</span>
+      </div>
+      <div>
+        <a href="tel:+919419182940" style="color: var(--yellow-accent); font-weight: 600;">📞 +91 94191 82940</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 11h4V7H6v4zm0 6h4v-4H6v4zm6-6h4V7h-4v4zm0 6h4v-4h-4v4zm6-10v4h4V7h-4zm0 6h4v-4h-4v4z"/></svg>
+        </div>
+        <div class="brand-text">
+          <h1>HIVE</h1>
+          <span>THE GAMING ARENA • JAMMU</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#zones">Gaming Zones</a>
+        <a href="#tournaments">Tournaments</a>
+        <a href="#calculator">Rate Calculator</a>
+        <a href="#location">Location &amp; Timings</a>
+      </nav>
+
+      <button class="btn-cta" onclick="openBookingModal()">
+        ⚡ Book Rig / Slot
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero">
+      <div class="hero-glow-purple"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        
+        <div class="hero-badges">
+          <span class="pill">📍 SHASTRI NAGAR, JAMMU</span>
+          <span class="pill pill-yellow">⭐ 4.6 / 5 GOOGLE RATING (72+ REVIEWS)</span>
+          <span class="pill">🏆 ₹60,000+ ESPORTS PRIZE POOLS HOSTED</span>
+        </div>
+
+        <h2 class="hero-title">
+          ENTER <span class="highlight">THE HIVE</span><br>
+          JAMMU&apos;S PREMIER ESPORTS ARENA
+        </h2>
+
+        <p class="hero-subtitle">
+          A dedicated gaming sanctuary built in Shastri Nagar, Jammu. Experience high-end PC LAN battlestations, PlayStation 5 duels, 360° VR immersion, and tournament pool &amp; snooker tables under one roof.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-cta" onclick="openBookingModal()">
+            ⚡ Book Rig / Inquire Slots
+          </button>
+          <a href="#tournaments" class="btn-cta btn-secondary">
+            🏆 Esports Tournaments
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=MVV6%2B83J+Shastri+Nagar+Jammu" target="_blank" class="btn-cta btn-secondary">
+            📍 Google Maps Directions
+          </a>
+        </div>
+
+        <!-- Bento quick highlights -->
+        <div class="bento-grid">
+          <div class="bento-card">
+            <div class="bento-icon">💻</div>
+            <div class="bento-title"><span>PC Battlestations</span> <span class="text-yellow">180Hz+</span></div>
+            <p class="bento-desc">Valorant, CS2, and Delta Force LAN servers.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">🎮</div>
+            <div class="bento-title"><span>PlayStation 5</span> <span class="text-purple">4K HDR</span></div>
+            <p class="bento-desc">FC/FIFA 26 and Tekken 8 on big screens.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">🥽</div>
+            <div class="bento-title"><span>VR Pods</span> <span class="text-yellow">360°</span></div>
+            <p class="bento-desc">Beat Saber &amp; motion-tracked VR thrills.</p>
+          </div>
+          <div class="bento-card">
+            <div class="bento-icon">🎱</div>
+            <div class="bento-title"><span>Pool &amp; Snooker</span> <span class="text-purple">Tables</span></div>
+            <p class="bento-desc">Tournament green baize tables to unwind.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GAMING ZONES SECTION -->
+    <section id="zones">
+      <div class="container">
+        <span class="section-tag">Arena Experiences</span>
+        <h3 class="section-heading">EXPLORE THE <span class="text-yellow">GAMING ZONES</span></h3>
+        <p class="section-lead">
+          Tailored for solo ranked grinds, 5v5 team scrimmages, and casual weekend tournaments in Shastri Nagar, Jammu.
+        </p>
+
+        <div class="zones-grid">
+          
+          <!-- PC Gaming -->
+          <div class="zone-card">
+            <div>
+              <div class="zone-header">
+                <span class="bento-icon">💻</span>
+                <span class="zone-badge">Most Popular</span>
+              </div>
+              <h4 class="zone-name">High-End PC Battlestations</h4>
+              <div class="zone-tagline">Low-Latency LAN &amp; 180Hz+ Displays</div>
+              <p class="zone-desc">Dedicated esports rigs equipped with high-FPS graphics cards, mechanical RGB switches, precision sensors, and fiber internet.</p>
+              <ul class="zone-specs">
+                <li>180Hz / 240Hz High Refresh Displays</li>
+                <li>Mechanical Keyboards &amp; Esports Mice</li>
+                <li>Valorant, Counter-Strike 2, Delta Force</li>
+              </ul>
+            </div>
+            <div>
+              <div class="zone-pricing">
+                <span style="font-size: 11px; color: var(--text-zinc-400);">Public Ref. Rate:</span>
+                <span class="price-value">₹250 / 2 Hours*</span>
+              </div>
+              <button class="btn-cta" style="width: 100%; justify-content: center;" onclick="openBookingModal('PC Battlestations')">
+                Reserve PC Rig
+              </button>
+            </div>
+          </div>
+
+          <!-- PlayStation 5 -->
+          <div class="zone-card">
+            <div>
+              <div class="zone-header">
+                <span class="bento-icon">🎮</span>
+                <span class="zone-badge">Console Lounge</span>
+              </div>
+              <h4 class="zone-name">PlayStation 5 Lounge</h4>
+              <div class="zone-tagline">4K Big Screen Couch Head-to-Head</div>
+              <p class="zone-desc">Plush couch seating with DualSense wireless controllers for intense local derbies and arcade fighting tournaments.</p>
+              <ul class="zone-specs">
+                <li>4K Ultra-HD Large Gaming Screens</li>
+                <li>Dual Controllers for 1v1 / 2v2 Duels</li>
+                <li>EA Sports FC / FIFA, Tekken 8, Mortal Kombat</li>
+              </ul>
+            </div>
+            <div>
+              <div class="zone-pricing">
+                <span style="font-size: 11px; color: var(--text-zinc-400);">Hourly Pass:</span>
+                <span class="price-value">₹150 / Hour</span>
+              </div>
+              <button class="btn-cta" style="width: 100%; justify-content: center;" onclick="openBookingModal('PS5 Lounge')">
+                Reserve Console
+              </button>
+            </div>
+          </div>
+
+          <!-- VR Gaming -->
+          <div class="zone-card">
+            <div>
+              <div class="zone-header">
+                <span class="bento-icon">🥽</span>
+                <span class="zone-badge">Next-Gen Tech</span>
+              </div>
+              <h4 class="zone-name">VR Immersion Pods</h4>
+              <div class="zone-tagline">360° Room-Scale Virtual Reality</div>
+              <p class="zone-desc">Step inside fully motion-tracked virtual environments with staff assistance and sanitary prep between plays.</p>
+              <ul class="zone-specs">
+                <li>6-DoF Headsets &amp; Motion Controllers</li>
+                <li>Safe Guardian Padded Bounds</li>
+                <li>Beat Saber, Superhot, Pistol Whip</li>
+              </ul>
+            </div>
+            <div>
+              <div class="zone-pricing">
+                <span style="font-size: 11px; color: var(--text-zinc-400);">Session Rate:</span>
+                <span class="price-value">₹200 / 20 Mins</span>
+              </div>
+              <button class="btn-cta" style="width: 100%; justify-content: center;" onclick="openBookingModal('VR Pod')">
+                Book VR Session
+              </button>
+            </div>
+          </div>
+
+          <!-- Pool & Snooker -->
+          <div class="zone-card">
+            <div>
+              <div class="zone-header">
+                <span class="bento-icon">🎱</span>
+                <span class="zone-badge">Social Cue Sports</span>
+              </div>
+              <h4 class="zone-name">Pool &amp; Snooker Arena</h4>
+              <div class="zone-tagline">Tournament Cloth &amp; Weighted Cues</div>
+              <p class="zone-desc">Take a tactical break from screens. Enjoy friendly 8-ball banter or snooker practice with friends.</p>
+              <ul class="zone-specs">
+                <li>Tournament Slate Baize Tables</li>
+                <li>Overhead LED Shadowless Lighting</li>
+                <li>8-Ball, 9-Ball &amp; Snooker Frames</li>
+              </ul>
+            </div>
+            <div>
+              <div class="zone-pricing">
+                <span style="font-size: 11px; color: var(--text-zinc-400);">Table Rate:</span>
+                <span class="price-value">₹200 / Frame or Hour</span>
+              </div>
+              <button class="btn-cta" style="width: 100%; justify-content: center;" onclick="openBookingModal('Pool & Snooker')">
+                Book Table
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TOURNAMENTS SECTION -->
+    <section id="tournaments">
+      <div class="container">
+        <span class="section-tag">Competitive Esports</span>
+        <h3 class="section-heading">ESPORTS &amp; <span class="text-yellow">TOURNAMENTS</span></h3>
+        <p class="section-lead">
+          HIVE brings organized offline LAN competitions to Jammu with referee supervision, bracket draws, and real prize pools.
+        </p>
+
+        <!-- Flagship: HIVE Gaming Fest 2026 -->
+        <div class="fest-banner">
+          <div class="fest-header">
+            <span class="badge-status" style="background: var(--yellow-accent); color: #000000; font-weight: 800;">
+              ★ FLAGSHIP CHAMPIONSHIP
+            </span>
+            <span style="font-size: 12px; font-weight: 700; color: var(--yellow-accent);">
+              FREE ENTRY (SPONSORED BY HIVE)
+            </span>
+          </div>
+
+          <h4 class="fest-title">HIVE GAMING FEST 2026</h4>
+          <p style="font-size: 14px; color: var(--text-zinc-300); max-width: 700px;">
+            Jammu&apos;s landmark multi-genre esports celebration held in April 2026 across PC, console, and mobile gaming categories.
+          </p>
+
+          <div class="fest-metrics">
+            <div class="metric-box">
+              <span class="metric-label">Total Prize Pool</span>
+              <span class="metric-val">₹60,000</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Entry Fee</span>
+              <span class="metric-val" style="color: #10b981;">FREE</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Platform Types</span>
+              <span class="metric-val">PC • Console • Mobile</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 15px;">
+            <strong style="font-size: 12px; color: var(--text-zinc-300); text-transform: uppercase;">Featured Titles:</strong>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+              <span class="pill">Tekken 8</span>
+              <span class="pill">FC26 / FIFA</span>
+              <span class="pill">Valorant (PC 5v5)</span>
+              <span class="pill">Counter-Strike 2</span>
+              <span class="pill">BGMI</span>
+              <span class="pill">Free Fire</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Archival Tournament: Valorant LAN 2025 -->
+        <div class="tourneys-grid">
+          <div class="tourney-card">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+              <span class="pill">14 – 15 JUNE 2025</span>
+              <span class="text-yellow font-display" style="font-weight: 800;">₹10,000 POOL</span>
+            </div>
+            <h4 class="font-display" style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px;">
+              Valorant 5v5 LAN Tournament
+            </h4>
+            <p style="font-size: 13px; color: var(--text-zinc-400); margin-bottom: 15px;">
+              Synchronized 10-PC LAN stage setup with ₹249 individual / ₹999 team entry options for Jammu&apos;s fiercest tactical squads.
+            </p>
+            <div style="font-size: 12px; color: var(--purple-light);">
+              ✔ Offline Zero-Ping LAN • Trophy Handover • Recorded Highlights
+            </div>
+          </div>
+
+          <div class="tourney-card" style="border-color: rgba(250, 204, 21, 0.4);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+              <span class="pill pill-yellow">UPCOMING SERIES</span>
+              <span class="text-yellow font-display" style="font-weight: 800;">₹25,000+ POOL</span>
+            </div>
+            <h4 class="font-display" style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px;">
+              HIVE Community Cups
+            </h4>
+            <p style="font-size: 13px; color: var(--text-zinc-400); margin-bottom: 15px;">
+              Weekend scrims and monthly championships in Valorant, Tekken 8, and FC26. Open to all regional rosters in Jammu &amp; Kashmir.
+            </p>
+            <button class="btn-cta" style="width: 100%; justify-content: center;" onclick="openBookingModal('Tournament Registration')">
+              Register Squad
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE RATE & RIG CALCULATOR -->
+    <section id="calculator">
+      <div class="container">
+        <span class="section-tag">Transparent Estimates</span>
+        <h3 class="section-heading">SLOT &amp; RATE <span class="text-yellow">CALCULATOR</span></h3>
+        <p class="section-lead">
+          Calculate your estimated session budget for PC, PS5, VR, or Pool tables before arriving.
+        </p>
+
+        <div class="calc-container">
+          
+          <!-- Controls -->
+          <div>
+            <div class="calc-group">
+              <label class="calc-label">1. Choose Arena Zone</label>
+              <div class="option-pills" id="calc-zone-selector">
+                <button class="pill-btn active" data-zone="pc" data-rate="125">PC Rigs (₹125/h)</button>
+                <button class="pill-btn" data-zone="ps5" data-rate="150">PS5 Lounge (₹150/h)</button>
+                <button class="pill-btn" data-zone="vr" data-rate="250">VR Pods (₹250/h)</button>
+                <button class="pill-btn" data-zone="pool" data-rate="200">Pool Table (₹200/h)</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label">2. Players / Rigs</label>
+              <div class="option-pills" id="calc-players-selector">
+                <button class="pill-btn" data-players="1">1 Player</button>
+                <button class="pill-btn active" data-players="2">2 Players (Duo)</button>
+                <button class="pill-btn" data-players="5">5 Players (Team Scrim)</button>
+                <button class="pill-btn" data-players="10">10 Players (5v5 LAN)</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label class="calc-label">3. Duration (Hours)</label>
+              <div class="option-pills" id="calc-duration-selector">
+                <button class="pill-btn" data-hours="1">1 Hour</button>
+                <button class="pill-btn active" data-hours="2">2 Hours (Popular)</button>
+                <button class="pill-btn" data-hours="3">3 Hours</button>
+                <button class="pill-btn" data-hours="5">5 Hours</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #fff; cursor: pointer;">
+                <input type="checkbox" id="calc-snacks-combo" style="width: 16px; height: 16px; accent-color: var(--purple-primary);">
+                Add Energy Drink &amp; Snack Combos (+₹120 / player)
+              </label>
+            </div>
+          </div>
+
+          <!-- Receipt & WhatsApp Booking -->
+          <div class="receipt-box">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <span class="font-display" style="font-weight: 800; color: #fff; font-size: 16px;">ESTIMATED BREAKDOWN</span>
+                <span class="pill pill-yellow">SHASTRI NAGAR</span>
+              </div>
+
+              <div class="receipt-row">
+                <span>Selected Experience:</span>
+                <strong id="receipt-zone-name" style="color: #fff;">PC Battlestations</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Session Scope:</span>
+                <span id="receipt-scope">2 Players × 2 Hours</span>
+              </div>
+              <div class="receipt-row">
+                <span>Base Rate:</span>
+                <span id="receipt-base">₹125 / player / hour</span>
+              </div>
+              <div class="receipt-row" id="receipt-snacks-row" style="display: none; color: var(--yellow-accent);">
+                <span>Snack &amp; Energy Drink:</span>
+                <span id="receipt-snacks-val">+₹240</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="receipt-total">
+                <div>
+                  <span style="font-size: 11px; color: var(--text-zinc-400); text-transform: uppercase;">Estimated Total</span>
+                  <span style="display: block; font-size: 10px; color: var(--text-zinc-500);">*Ref rates; confirmed at desk</span>
+                </div>
+                <div class="total-price" id="calc-total-display">₹500</div>
+              </div>
+
+              <button class="btn-cta" style="width: 100%; justify-content: center; margin-top: 15px;" onclick="sendWhatsAppBooking()">
+                💬 Reserve on WhatsApp
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & TIMINGS SECTION -->
+    <section id="location">
+      <div class="container">
+        <span class="section-tag">Find Us</span>
+        <h3 class="section-heading">LOCATION &amp; <span class="text-yellow">OPERATING HOURS</span></h3>
+        <p class="section-lead">
+          Centrally situated in Shastri Nagar, Jammu for easy access from Gandhi Nagar, Nai Basti, and greater Jammu.
+        </p>
+
+        <div class="location-box">
+          <div>
+            <h4 class="font-display" style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px;">
+              HIVE The Gaming Arena
+            </h4>
+            <p style="font-size: 14px; color: var(--text-zinc-300); margin-bottom: 12px;">
+              📍 MVV6+83J, Shastri Nagar, Jammu, Jammu &amp; Kashmir 180004
+            </p>
+
+            <div class="plus-code-banner">
+              <div>
+                <span style="font-size: 10px; text-transform: uppercase; color: var(--text-zinc-400); display: block;">Google Maps Plus Code:</span>
+                <strong style="color: var(--yellow-accent); font-family: monospace; font-size: 16px;">MVV6+83J</strong>
+              </div>
+              <button class="pill-btn" onclick="copyPlusCode(this)">
+                Copy Code
+              </button>
+            </div>
+
+            <div style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px;">
+              <strong style="color: #fff; font-size: 13px; display: block; margin-bottom: 4px;">⏰ Operating Hours:</strong>
+              <span style="font-size: 14px; color: var(--yellow-accent); font-weight: 700;">10:00 AM – 11:00 PM (Monday – Sunday)</span>
+              <p style="font-size: 12px; color: var(--text-zinc-400); margin-top: 4px;">
+                Open all 7 days for daytime practice matches and evening ranked sessions.
+              </p>
+            </div>
+
+            <p style="font-size: 12px; color: var(--text-zinc-400); font-style: italic;">
+              * Note: Some third-party web directories display slight location differences; checking the venue&apos;s current social media or calling ahead is recommended.
+            </p>
+          </div>
+
+          <!-- Interactive Map link -->
+          <div class="map-preview">
+            <div style="font-size: 36px; margin-bottom: 10px;">🗺️</div>
+            <h5 class="font-display" style="font-size: 18px; font-weight: 800; color: #fff;">Shastri Nagar Arena Landmark</h5>
+            <p style="font-size: 12px; color: var(--text-zinc-400); margin: 6px 0 16px;">
+              Click to launch instant turn-by-turn navigation on Google Maps.
+            </p>
+            <a href="https://www.google.com/maps/search/?api=1&query=MVV6%2B83J+Shastri+Nagar+Jammu" target="_blank" class="btn-cta">
+              Open Google Maps (MVV6+83J)
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <span class="font-display" style="font-weight: 900; font-size: 18px; color: #fff;">HIVE THE GAMING ARENA</span>
+        <span class="pill pill-yellow" style="font-size: 10px;">JAMMU</span>
+      </div>
+      <p style="font-size: 12px; margin-bottom: 8px;">
+        MVV6+83J, Shastri Nagar, Jammu, Jammu &amp; Kashmir 180004 • Operating 10:00 AM to 11:00 PM Everyday
+      </p>
+      <p style="font-size: 11px; color: var(--text-zinc-500);">
+        © 2026 HIVE The Gaming Arena. Built for the Jammu &amp; Kashmir Gaming and Esports Community.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <h3 class="font-display" style="font-weight: 800; font-size: 20px; color: #fff; margin-bottom: 6px;">
+        RESERVE ARENA RIG / SLOT
+      </h3>
+      <p style="font-size: 12px; color: var(--yellow-accent); margin-bottom: 16px;">
+        HIVE The Gaming Arena • Shastri Nagar, Jammu
+      </p>
+
+      <form onsubmit="handleModalSubmit(event)">
+        <input type="text" id="modal-name" class="input-field" placeholder="Your Name / Gamer Tag" required>
+        <input type="tel" id="modal-phone" class="input-field" placeholder="WhatsApp / Phone Number" required>
+        
+        <select id="modal-zone" class="input-field">
+          <option value="PC Battlestations">High-End PC Battlestation</option>
+          <option value="PS5 Lounge">PlayStation 5 Console</option>
+          <option value="VR Pods">VR Immersion Pod</option>
+          <option value="Pool & Snooker">Pool &amp; Snooker Table</option>
+        </select>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <input type="date" id="modal-date" class="input-field" required>
+          <select id="modal-time" class="input-field">
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="05:00 PM">05:00 PM (Prime)</option>
+            <option value="07:00 PM">07:00 PM (Prime)</option>
+            <option value="09:00 PM">09:00 PM</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-cta" style="width: 100%; justify-content: center; margin-top: 10px;">
+          Confirm Booking via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       JAVASCRIPT FUNCTIONALITY
+       ======================================================== -->
+  <script>
+    // State variables for interactive calculator
+    let currentZone = 'pc';
+    let currentRate = 125;
+    let currentPlayers = 2;
+    let currentHours = 2;
+    let addSnacks = false;
+
+    // Set today's date in modal
+    const todayStr = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('modal-date');
+    if (dateInput) dateInput.value = todayStr;
+
+    // Check operating hours (10:00 to 23:00)
+    function updateOpeningStatus() {
+      const now = new Date();
+      const currentHour = now.getHours();
+      const isOpen = currentHour >= 10 && currentHour < 23;
+      const indicator = document.getElementById('live-indicator');
+      const text = document.getElementById('live-text');
+      
+      if (indicator && text) {
+        if (isOpen) {
+          indicator.style.background = '#10b981';
+          text.textContent = 'OPEN NOW • 10:00 AM – 11:00 PM';
+        } else {
+          indicator.style.background = '#f59e0b';
+          text.textContent = 'OPENS AT 10:00 AM';
+        }
+      }
+    }
+    updateOpeningStatus();
+
+    // Calculator selector logic
+    function setupCalculator() {
+      // Zone buttons
+      const zoneBtns = document.querySelectorAll('#calc-zone-selector .pill-btn');
+      zoneBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          zoneBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentZone = btn.dataset.zone;
+          currentRate = parseInt(btn.dataset.rate, 10);
+          updateReceipt();
+        });
+      });
+
+      // Players buttons
+      const playerBtns = document.querySelectorAll('#calc-players-selector .pill-btn');
+      playerBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          playerBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentPlayers = parseInt(btn.dataset.players, 10);
+          updateReceipt();
+        });
+      });
+
+      // Duration buttons
+      const hourBtns = document.querySelectorAll('#calc-duration-selector .pill-btn');
+      hourBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          hourBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentHours = parseInt(btn.dataset.hours, 10);
+          updateReceipt();
+        });
+      });
+
+      // Snacks combo
+      const snacksCheckbox = document.getElementById('calc-snacks-combo');
+      if (snacksCheckbox) {
+        snacksCheckbox.addEventListener('change', (e) => {
+          addSnacks = e.target.checked;
+          updateReceipt();
+        });
+      }
+    }
+
+    function updateReceipt() {
+      const zoneNames = {
+        pc: 'PC Battlestations',
+        ps5: 'PlayStation 5 Lounge',
+        vr: 'VR Immersion Pods',
+        pool: 'Pool & Snooker Table'
+      };
+
+      const multiplier = currentZone === 'pool' ? 1 : currentPlayers;
+      const baseSubtotal = currentRate * currentHours * multiplier;
+      const snackCost = addSnacks ? (120 * currentPlayers) : 0;
+      const total = baseSubtotal + snackCost;
+
+      // Update DOM
+      document.getElementById('receipt-zone-name').textContent = zoneNames[currentZone] || 'Gaming Rig';
+      document.getElementById('receipt-scope').textContent = `${currentPlayers} Player(s) × ${currentHours} Hour(s)`;
+      document.getElementById('receipt-base').textContent = `₹${currentRate} / unit / hr`;
+      document.getElementById('calc-total-display').textContent = `₹${total}`;
+
+      const snacksRow = document.getElementById('receipt-snacks-row');
+      if (snacksRow) {
+        if (addSnacks) {
+          snacksRow.style.display = 'flex';
+          document.getElementById('receipt-snacks-val').textContent = `+₹${snackCost}`;
+        } else {
+          snacksRow.style.display = 'none';
+        }
+      }
+    }
+
+    function sendWhatsAppBooking() {
+      const zoneNames = {
+        pc: 'PC Battlestations',
+        ps5: 'PS5 Lounge',
+        vr: 'VR Pod',
+        pool: 'Pool Table'
+      };
+      const text = encodeURIComponent(
+        `Hi HIVE The Gaming Arena Jammu! I want to book:
+• Zone: ${zoneNames[currentZone]}
+• Players: ${currentPlayers}
+• Duration: ${currentHours} Hours
+• Estimated Total: ${document.getElementById('calc-total-display').textContent}
+Venue: Shastri Nagar, Jammu (MVV6+83J)`
+      );
+      window.open(`https://wa.me/919419182940?text=${text}`, '_blank');
+    }
+
+    // Modal controls
+    function openBookingModal(zoneName) {
+      const modal = document.getElementById('booking-modal');
+      if (modal) {
+        modal.classList.add('active');
+        if (zoneName) {
+          const zoneSelect = document.getElementById('modal-zone');
+          if (zoneSelect) zoneSelect.value = zoneName;
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('modal-name').value;
+      const phone = document.getElementById('modal-phone').value;
+      const zone = document.getElementById('modal-zone').value;
+      const date = document.getElementById('modal-date').value;
+      const time = document.getElementById('modal-time').value;
+
+      const text = encodeURIComponent(
+        `Hi HIVE Jammu! Slot Reservation:
+• Gamer: ${name}
+• Phone: ${phone}
+• Experience: ${zone}
+• Date & Time: ${date} at ${time}
+Location: Shastri Nagar, Jammu`
+      );
+
+      closeBookingModal();
+      window.open(`https://wa.me/919419182940?text=${text}`, '_blank');
+    }
+
+    // Copy Plus Code Helper
+    function copyPlusCode(btnElement) {
+      navigator.clipboard.writeText('MVV6+83J').then(() => {
+        const originalText = btnElement.textContent;
+        btnElement.textContent = 'Copied!';
+        btnElement.style.color = '#10b981';
+        setTimeout(() => {
+          btnElement.textContent = originalText;
+          btnElement.style.color = '';
+        }, 2000);
+      });
+    }
+
+    // Initialize calculator
+    setupCalculator();
+    updateReceipt();
+  </script>
+</body>
+</html>
